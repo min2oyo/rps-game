@@ -21,22 +21,25 @@ function App() {
 
 	// 변수
 	const [MyChoice, setMyChoice] = useState(null);
+	const [ComputerChoice, setComputerChoice] = useState(null);
 
 	// 함수
 	const play = (choose) => {
-		console.log(choose.name);
+		// 나의 선택
 		setMyChoice(choose.img);
 
-		const random = Math.trunc(Math.random() * 3) + 1;
-		console.log(`random`, random);
-		
 		// 컴퓨터 선택
+		const random = Math.trunc(Math.random() * 3) + 1;
+
 		switch (random) {
 			case 1:
+				setComputerChoice(choice.scissor.img);
 				break;
 			case 2:
+				setComputerChoice(choice.rock.img);
 				break;
 			case 3:
+				setComputerChoice(choice.paper.img);
 				break;
 			default:
 				break;
@@ -49,7 +52,7 @@ function App() {
 			<div className="container">
 				<div className="main-image center">
 					<Box title="You" choose={MyChoice} />
-					<Box title="Computer" />
+					<Box title="Computer" choose={ComputerChoice} />
 				</div>
 				<div className="main-button center">
 					{/* onClick={play()하면 함수가 바로 실행됨} */}
