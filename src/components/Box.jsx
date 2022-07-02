@@ -7,10 +7,10 @@ const Box = (props) => {
 				<h1>{props.title}</h1>
 				<img
 					className="item-img"
-					src="https://cdn-icons-png.flaticon.com/512/4973/4973989.png"
+					src={props.choose}
 					alt={`${props.title} 이미지`}
 				/>
-				<div>WIN</div>
+				<div className="result">WIN</div>
 			</div>
 		</>
 	);
