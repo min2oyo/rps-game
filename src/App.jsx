@@ -29,7 +29,8 @@ function App() {
 		setMyChoice(choose.img);
 
 		// 컴퓨터 선택
-		const random = Math.trunc(Math.random() * 3) + 1;
+		const itemArray = Object.keys(choice);
+		const random = Math.trunc(Math.random() * itemArray.length) + 1;
 
 		switch (random) {
 			case 1:
