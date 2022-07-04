@@ -26,25 +26,13 @@ function App() {
 	// 함수
 	const play = (choose) => {
 		// 나의 선택
-		setMyChoice(choose.img);
+		setMyChoice(choose);
 
 		// 컴퓨터 선택
 		const itemArray = Object.keys(choice);
-		const random = Math.trunc(Math.random() * itemArray.length) + 1;
-
-		switch (random) {
-			case 1:
-				setComputerChoice(choice.scissor.img);
-				break;
-			case 2:
-				setComputerChoice(choice.rock.img);
-				break;
-			case 3:
-				setComputerChoice(choice.paper.img);
-				break;
-			default:
-				break;
-		}
+		const random = Math.trunc(Math.random() * itemArray.length);
+		const computer = itemArray[random];
+		setComputerChoice(choice[computer]);
 	};
 
 	// return

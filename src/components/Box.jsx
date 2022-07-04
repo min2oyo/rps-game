@@ -8,12 +8,13 @@ const Box = (props) => {
 				{props.choose !== null ? (
 					<img
 						className="item-img"
-						src={props.choose}
+						src={props.choose.img}
 						alt={`${props.title} 이미지`}
 					/>
 				) : (
 					<h1>Ready</h1>
 				)}
+				<h2>{props.choose.name}</h2>
 				<div className="result">WIN</div>
 			</div>
 		</>
