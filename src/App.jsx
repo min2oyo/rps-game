@@ -37,21 +37,17 @@ function App() {
 		const computer = itemArray[random];
 		setComputerChoice(choice[computer]);
 
-		// 중간확인
-		console.log(UserChoice.name);
-		console.log(ComputerChoice.name);
-
 		// 승패
-		if (UserChoice.name === ComputerChoice.name) {
+		if (choose.name === choice[computer].name) {
 			setUserResult(result[2]);
 			setComputerResult(result[2]);
 		} else if (
-			(UserChoice.name === choice.scissor.name &&
-				ComputerChoice.name === choice.paper.name) ||
-			(UserChoice.name === choice.rock.name &&
-				ComputerChoice.name === choice.scissor.name) ||
-			(UserChoice.name === choice.paper.name &&
-				ComputerChoice.name === choice.rock.name)
+			(choose.name === choice.scissor.name &&
+				choice[computer].name === choice.paper.name) ||
+			(choose.name === choice.rock.name &&
+				choice[computer].name === choice.scissor.name) ||
+			(choose.name === choice.paper.name &&
+				choice[computer].name === choice.rock.name)
 		) {
 			setUserResult(result[0]);
 			setComputerResult(result[1]);

@@ -5,7 +5,9 @@ const Box = (props) => {
 		<>
 			<div className="box">
 				<h1>{props.title}</h1>
-				{props.choose !== null ? (
+				{props.choose === null ? (
+					<h1>Ready</h1>
+				) : (
 					<>
 						<img
 							className="item-img"
@@ -15,8 +17,6 @@ const Box = (props) => {
 						<h2>{props.choose.name}</h2>
 						<div className="result">{props.result}</div>
 					</>
-				) : (
-					<h1>Ready</h1>
 				)}
 			</div>
 		</>
