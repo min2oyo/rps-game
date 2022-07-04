@@ -1,0 +1,17 @@
+.box {
+	position: relative;
+	border: 1px solid black;
+	width: 500px;
+	height: 500px;
+	margin: 50px;
+	text-align: center;
+}
+
+.item-img {
+	width: 300px;
+}
+
+.result {
+	position: absolute;
+	bottom: 30px;
+}
